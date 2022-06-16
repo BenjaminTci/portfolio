@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BenjaminTci</title>
+    <link rel="icon" href="styles/assets/favicon.png" />
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/animations.css">
+</head>
+<body>
+    <header>
+        <a href="#home">
+            <img src="styles/assets/logo.svg" class="logo">
+        </a>
+
+        <nav class="menu-pc">
+            <ul>
+                <li><a href="#projects" class="link">Réalisations</a> </li>
+                <li><a href="#presentation" class="link">Qui je suis</a> </li>
+                <li><a href="#contact" class="link">Contact</a> </li>
+            </ul>
+        </nav>
+
+        <div class="nav-toggle">
+            <div class="nav-toggle-bar"></div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#projects">Réalisations</a> </li>
+                    <li><a href="#presentation">Qui je suis</a> </li>
+                    <li><a href="#contact">Contact</a> </li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+    <main>
+        <section id="home">
+            <div>
+                <p class="topPrez">Bienvenu ! </p>
+                <h1 class="topPrez">Je suis Benjamin, </h1>
+                <p class="topPrez">développeur web</p>
+            </div>
+
+            <div class="scroll">
+                <a href="#projects"><span></span></a>
+            </div>
+        </section>
+        <section id="projects">
+            <h2>Mes réalisations</h2>
+            <div class="list-projects">
+                <div class="project">
+                    <a href="projets/aktya.html">
+                        <img src="styles/img/aktya.png">
+                        <div class="nameProject">
+                            <p>Aktya</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="projets/fournier.html">
+                        <img src="styles/img/fournier.png">
+                        <div class="nameProject">
+                            <p>Menuiserie fournier</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="projets/loremmi.html">
+                        <img src="styles/img/loremmi.png">
+                        <div class="nameProject">
+                            <p>Loremmi</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="projets/campass.html">
+                        <img src="styles/img/campass.png">
+                        <div class="nameProject">
+                            <p>Campass</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </section>
+        <section id="presentation">
+            <h2>Qui je suis</h2>
+            <p>Étudiant en Master 2 multimédia et informatique, je me suis spécialisé et passionné dans le développement.</p>
+            <p>Plusieurs expériences concrètes et profesionnelles m'ont permis de développer, notament en Agence web, de nombreux site internet. </p>
+            <p>Je suis aussi fan de Star Wars, d'athlétisme et de musique.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Une question ou un projet ? N'hésitez pas à me contacter !</p>
+            <div>
+                <a href="mailto:email@exemple.com" class="contactBtn">Envoyer un message</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <img src="styles/assets/logo.svg" class="logo">
+        <a href="mailto:email@exemple.com">Me contacter</a>
+        <p>BenjaminTci © - <a href="styles/assets/mentions-legales.pdf" target="_blank">Mentions légales</a></p>
+    </footer>
+    <script src="menu.js"></script>
+</body>
+</html>
