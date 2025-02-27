@@ -1,0 +1,1036 @@
+/*
+Theme Name: Portfolio
+Author: Benjamin Truchi
+Description: Mon thème pour mon portfolio 
+Version: 1.1
+*/
+
+
+/* Gestion des typographies */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');
+
+html {
+    font-size: 62.5%;
+}
+
+li,
+a,
+p,
+input,
+textarea,
+label {
+    font-family: 'Roboto', Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+.menu a {
+    font-family: 'Lato', Arial, sans-serif;
+}
+
+.balise {
+    font-family: 'Source Code Pro', monospace, sans-serif;
+}
+
+h1 {
+    font-size: calc(6rem + 2.5vw);
+}
+
+h2 {
+    font-size: 7.5rem;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 7rem;
+    font-weight: 400;
+}
+
+p,
+footer a,
+input,
+textarea,
+label,
+.retour {
+    font-size: 1.8rem;
+}
+
+.retour {
+    width: fit-content;
+}
+
+.sous-titre {
+    font-size: 2rem;
+}
+
+.menu-pc li a,
+li {
+    font-size: 2.2rem;
+    text-decoration: none;
+    color: #f5f5f5;
+}
+
+.idc-categorie,
+.rs {
+    font-weight: 700;
+}
+
+.role,
+.erreur-page p,
+.menu li {
+    font-size: 3.5rem;
+}
+
+a {
+    color: #f5f5f5;
+}
+
+.infos-projet p {
+    font-size: 2.5rem;
+}
+
+
+/* Contenu principal */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #121314;
+    color: #f5f5f5;
+}
+
+.flex {
+    display: flex;
+}
+
+.logo {
+    width: 8rem;
+    height: auto;
+}
+
+
+/*Barre de scroll*/
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+
+/* Fond */
+
+::-webkit-scrollbar-track {
+    background: #121314;
+}
+
+
+/* Barre */
+
+::-webkit-scrollbar-thumb {
+    background: rgb(109, 109, 109);
+}
+
+
+/* Hover*/
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(139, 133, 133);
+}
+
+
+/* Header */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+header,
+.navigation {
+    width: 100%;
+    height: 7rem;
+}
+
+.navigation {
+    padding: 0 3rem 0 3rem;
+    background-color: #202122;
+    opacity: 96%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+    margin-left: 3rem;
+}
+
+.menu-pc ul {
+    display: flex;
+    margin: 0;
+}
+
+
+/* Contenu accueil */
+
+.logo-home {
+    position: absolute;
+    right: 0;
+    width: 70rem;
+    height: 60rem;
+    background-repeat: no-repeat;
+    animation: titre 1s linear;
+}
+
+.top {
+    margin-top: 7rem;
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 7rem);
+}
+
+.balise {
+    color: #707070;
+}
+
+.role {
+    margin-top: 3rem;
+    margin-left: .9rem;
+}
+
+h2 {
+    margin-bottom: 9rem;
+}
+
+#realisations,
+#contact {
+    padding-top: 15rem;
+}
+
+.conteneur-principal {
+    overflow-x: hidden;
+}
+
+
+/* Balises */
+
+#body-open {
+    position: absolute;
+    top: 10rem;
+    left: 5rem;
+}
+
+#body-close {
+    margin-left: 4.85rem;
+    margin-top: 5rem;
+}
+
+
+/* Présentation */
+
+#presentation {
+    padding-top: 7.5rem;
+}
+
+#presentation h2 {
+    margin-top: 0;
+}
+
+.identite {
+    display: flex;
+    justify-content: center;
+}
+
+.carte-id {
+    width: 50rem;
+    height: 65rem;
+    border: 1px solid white;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+    transition: 0.3s;
+    padding: 2rem 4rem 2rem 4rem;
+}
+
+.idc-top {
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.idc-contenu {
+    margin-top: 2rem;
+}
+
+.carte-id img {
+    display: block;
+    max-height: 27rem;
+    width: auto;
+    margin: 0 auto 2rem auto;
+}
+
+
+/* Mes réalisations  */
+
+.desc::after {
+    content: '';
+    display: block;
+    border-bottom: solid 2px;
+    width: 100%;
+    color: #ABAAAA;
+    margin-top: 1rem;
+}
+
+.image {
+    padding: 0;
+}
+
+.img-projet {
+    filter: brightness(60%);
+}
+
+.p-droite .image {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.infos {
+    position: absolute;
+    width: 27.2rem;
+    top: 70%;
+}
+
+.p-gauche .infos {
+    right: 0;
+    text-align: right;
+}
+
+h3 {
+    position: absolute;
+    top: 10%;
+    z-index: 3;
+}
+
+.p-gauche h3 {
+    right: 7%;
+}
+
+.p-droite h3 {
+    left: 10%;
+}
+
+.un-projet {
+    position: relative;
+    margin-bottom: 15rem;
+}
+
+.un-projet:last-of-type {
+    margin-bottom: 0;
+}
+
+.conteneur-projet {
+    position: relative;
+    width: fit-content;
+    overflow: hidden;
+}
+
+.conteneur-projet img {
+    transition: .5s;
+}
+
+.conteneur-projet img:hover {
+    transform: scale(1.2);
+}
+
+.page-projet .container {
+    max-width: 80%;
+}
+
+
+/* Page d'un projet */
+.projet-top {
+    width: 100%;
+    height: calc(100vh - 7rem);
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projet-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    width: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    animation: titre 1s linear;
+}
+
+.projet-top h1 {
+    font-weight: 700;
+}
+
+.projet-top p {
+    margin-top: 2rem;
+    font-size: 2.5rem;
+}
+
+.projet-infos {
+    width: 80%;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.projet-top .scroll {
+    top: 92%;
+}
+
+.images-projet img {
+    margin-bottom: 5rem;
+}
+
+.images-projet-mobile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.images-projet-mobile img {
+    width: 35rem;
+    margin-bottom: 3rem;
+}
+
+.le-projet {
+    display: flex;
+    flex-direction: column;
+}
+
+.le-projet h2 {
+    margin-bottom: 5rem;
+}
+
+.infos-projet {
+    margin-bottom: 5rem;
+}
+
+.infos-projet span {
+    font-weight: 700;
+}
+
+.infos-projet .lien-facultatif {
+    width: fit-content;
+    line-break: anywhere;
+}
+
+/* Formulaire de contact */
+
+.wpforms-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.wpforms-form .wpforms-field.wpforms-field-textarea .wpforms-field-label,
+.wpforms-form .wpforms-field.wpforms-field-email .wpforms-field-label,
+.wpforms-form .wpforms-field.wpforms-field-text .wpforms-field-label {
+    font-size: 1.8rem;
+    color: white;
+    font-weight: bold;
+}
+
+.wpforms-form .wpforms-field.wpforms-field-text input,
+.wpforms-container-full .wpforms-form input[type=email],
+.wpforms-form .wpforms-field.wpforms-field-textarea textarea {
+    background: none;
+    padding: 0.9rem 1.5rem;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.4rem;
+    color: #f5f5f5;
+    margin-bottom: 2rem;
+}
+
+.wpforms-form .wpforms-field.wpforms-field-text input:focus,
+.wpforms-form .wpforms-field.wpforms-field-text input:focus:invalid,
+.wpforms-container-full .wpforms-form input[type=email]:focus,
+.wpforms-container-full .wpforms-form input[type=email]:focus:invalid,
+.wpforms-container-full .wpforms-form .wpforms-field-container textarea:focus {
+    color: #f5f5f5;
+}
+
+.wpforms-container-full .wpforms-form input[type=email],
+.wpforms-form .wpforms-field.wpforms-field-text input {
+    width: 50%;
+}
+
+.wpforms-form .wpforms-field.wpforms-field-textarea textarea {
+    resize: none;
+}
+
+.wpforms-container-full .wpforms-form .wpforms-submit-container .bouton-envoyer:not(:hover):not(:active) {
+    width: 15rem;
+    background-color: transparent;
+    border: 1px solid #f5f5f5;
+    border-radius: 0.4rem;
+    color: #f5f5f5;
+    padding: 10px 30px 10px 30px;
+    cursor: pointer;
+    font-size: 1.8rem;
+    width: 15rem;
+}
+
+.wpforms-container-full .wpforms-form .wpforms-submit-container .bouton-envoyer:hover {
+    width: 15rem;
+    background-color: transparent;
+    border-radius: 0.4rem;
+    padding: 10px 30px 10px 30px;
+    cursor: pointer;
+    font-size: 1.8rem;
+    width: 15rem;
+    border: 1px solid #00A0FF;
+    color: #00A0FF;
+}
+
+#contact h2 {
+    margin-bottom: 3rem;
+}
+
+#contact p {
+    margin-bottom: 6rem;
+}
+
+
+/* Footer */
+
+footer {
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4rem;
+    background-color: #1B1C1D;
+}
+
+footer a {
+    margin: 0 .5rem 0 .5rem;
+}
+
+footer .rs,
+footer .copyright,
+footer div:last-of-type {
+    margin-bottom: 3rem;
+}
+
+footer .copyright {
+    margin-top: .5rem;
+}
+
+.rs a {
+    margin-left: 6vw;
+}
+
+.rs a:first-of-type {
+    margin-left: 0;
+}
+
+/* Page 404 */
+
+.erreur-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15rem;
+    margin-bottom: 12rem;
+    text-align: center;
+    min-height: 60vh;
+}
+
+.erreur-page h1 {
+    margin-bottom: 12rem;
+}
+
+/* Sitemap */
+.sitemap {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15rem;
+    margin-bottom: 12rem;
+    min-height: 60vh;
+}
+
+.sitemap a {
+    font-size: 1.8rem;
+    width: fit-content;
+}
+
+@media only screen and (min-width: 992px) {
+
+    /* Balises décoratives */
+    #presentation h2,
+    #realisations h2,
+    #contact h2 {
+        position: relative;
+    }
+
+    .nom:before {
+        content: '<h1>';
+    }
+
+    .nom:after {
+        content: '</h1>';
+    }
+
+    #presentation h2:before,
+    #realisations h2:before,
+    #contact h2:before {
+        content: '<h2>';
+    }
+
+    #presentation h2:after,
+    #realisations h2:after,
+    #contact h2:after {
+        content: '</h2>';
+    }
+
+    .nom:before,
+    #presentation h2:before,
+    #realisations h2:before,
+    #contact h2:before {
+        color: #707070;
+        font-size: 1.8rem;
+        font-family: 'Source Code Pro', monospace, sans-serif;
+        position: absolute;
+        top: -1rem;
+        left: -3rem;
+    }
+
+    .nom:after,
+    #presentation h2:after,
+    #realisations h2:after,
+    #contact h2:after {
+        color: #707070;
+        font-size: 1.8rem;
+        font-family: 'Source Code Pro', monospace, sans-serif;
+        position: absolute;
+        bottom: -1rem;
+    }
+}
+
+
+/* Menu et titre projets - hover*/
+
+.lien:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #00A0FF;
+    transition: width .3s;
+}
+
+.lien:hover:after {
+    width: 100%;
+    transition: width .3s;
+}
+
+a:hover {
+    color: #f5f5f5;
+    text-decoration: none;
+}
+
+
+/* Nom prenom */
+
+.nom {
+    animation: titre 1s linear;
+    position: relative;
+    user-select: none;
+}
+
+@keyframes titre {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* Sous titre de role */
+
+.role {
+    color: transparent;
+    position: absolute;
+    padding: 0 1rem 0 0;
+    background-size: cover;
+}
+
+.role:before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #f5f5f5;
+    overflow: hidden;
+    border-right: 1px solid white;
+    animation: ecriture 3s steps(25);
+    white-space: nowrap;
+}
+
+@keyframes ecriture {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.stop-slide {
+    transition: none;
+}
+
+
+/* Menu */
+
+.nav-toggle {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.nav-toggle-bar,
+.nav-toggle-bar:before,
+.nav-toggle-bar:after {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: white;
+    transition: all 0.5s ease-in-out;
+    z-index: 3;
+}
+
+.nav-toggle-bar:before {
+    content: "";
+    top: -10px;
+}
+
+.nav-toggle-bar:after {
+    content: "";
+    top: 10px;
+}
+
+.nav-toggle.active .nav-toggle-bar {
+    background: white;
+    transform: rotate(135deg);
+}
+
+.nav-toggle.active .nav-toggle-bar:before,
+.nav-toggle.active .nav-toggle-bar:after {
+    background: white;
+    transform: rotate(90deg);
+    top: 0;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #121314;
+    display: flex;
+    color: #f5f5f5;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(100vw);
+    transition: all 0.5s ease-in-out;
+}
+
+.menu.open {
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.menu li {
+    list-style: none;
+    padding: 20px 0 20px 0;
+    transform: translateX(30px);
+    opacity: 0;
+    transition: all .4s ease-in-out;
+    margin: 0;
+}
+
+.menu.open li {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.noscroll {
+    overflow: hidden;
+}
+
+.menu.open li:nth-child(n+1) {
+    transition-delay: .4s;
+}
+
+.menu.open li:nth-child(n+2) {
+    transition-delay: .45s;
+}
+
+.menu.open li:nth-child(n+3) {
+    transition-delay: .50s;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/*Fleches d'incitation au scroll */
+
+.scroll {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.scroll span {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+    transform: rotate(45deg);
+    animation: animation-fleche-scroll 2s infinite;
+}
+
+@keyframes animation-fleche-scroll {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+}
+
+/* Ajout pour le responsive */
+
+/* Tablette & mobiles */
+
+@media only screen and (max-width: 992px) {
+    .infos {
+        position: relative;
+        width: 100%;
+    }
+
+    h3 {
+        top: 20%;
+    }
+
+    .p-gauche h3 {
+        right: 5%;
+    }
+
+    .p-droite h3 {
+        left: 5%;
+    }
+
+    .desc-mobile {
+        margin-top: 1rem;
+        text-align: center;
+        font-style: italic;
+    }
+
+    .un-projet {
+        margin-bottom: 7rem;
+    }
+
+    .un-projet:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .projet-intro {
+        height: 65%;
+    }
+
+    .projet-infos p {
+        font-size: 1.8rem;
+        margin: 0;
+    }
+
+    .menu-pc {
+        display: none;
+    }
+
+    .balise {
+        display: none;
+    }
+
+    .centre {
+        left: 35%;
+    }
+
+    .retour {
+        margin-top: 4rem;
+    }
+
+    .carte-id {
+        padding: 2rem 3rem 2rem 3rem;
+    }
+
+    .idc-contenu {
+        margin-top: 1rem;
+    }
+
+    .carte-id img {
+        max-height: 20rem;
+        width: auto;
+    }
+
+    .page-projet .container {
+        max-width: 90%;
+    }
+
+    .images-projet img {
+        margin-bottom: 3rem;
+    }
+}
+
+/* Tablette */
+@media only screen and (max-width: 811px) {
+    .images-projet-mobile  {
+        justify-content: center;
+    }
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 576px) {
+    h2 {
+        font-size: 4.5rem;
+        margin-bottom: 4rem;
+    }
+
+    h3 {
+        font-size: 4rem;
+    }
+
+    #realisations,
+    #contact {
+        padding-top: 8rem;
+    }
+
+    .wpforms-form .wpforms-field.wpforms-field-text input,
+    .wpforms-container-full .wpforms-form input[type=email] {
+        width: 100%;
+    }
+
+    .role {
+        font-size: 2rem;
+    }
+
+    .centre {
+        left: 28%;
+    }
+
+    footer p,
+    footer a {
+        font-size: 1.5rem;
+    }
+
+    .mobile-version {
+        order: 1;
+    }
+
+    .desktop-version {
+        order: 2;
+    }
+
+    .le-projet .retour {
+        order: 3;
+    }
+}
+
+/*Extra large*/
+
+@media only screen and (max-width: 1200px) {
+    .logo-home {
+        display: none;
+    }
+}
+
+/* Non mobile/tablette */
+
+@media only screen and (min-width: 992px) {
+    .desc-mobile {
+        display: none;
+    }
+
+    .menu,
+    .nav-toggle {
+        display: none;
+    }
+
+    .retour {
+        position: absolute;
+        top: 10rem;
+        left: 5rem;
+    }
+}
+
+.contactBtn {
+    background-color: #00A0FF;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: all .25s ease-in-out;
+}
+.contactBtn:hover {
+    transform: scale(1.1);
+}
+#contact p {
+    margin-bottom: 3rem;
+}
